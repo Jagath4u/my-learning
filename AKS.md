@@ -45,3 +45,31 @@ k get pv
 k get pvc
 **Note: The status of the persistent volume and volume claim should be BOUND**
 ```
+#### - To check the status of services in pods
+```
+k get services
+```
+#### - To check the secrets
+```
+k get secrets
+```
+#### - To list down the statefulsets
+```
+k get sts
+```
+#### - To scale down the statefulset
+```
+k scale sts mysql-secondary --replicas=0
+```
+#### - To describe the secret
+```
+k get secret mysql -oyaml
+```
+#### - To see the decode the encoded password
+```
+echo cHJvbS1vcGVyYXRvcg== | base64 -d
+```
+#### - To get volumesnapshot class
+```
+k get volumesnapshotclass
+```
