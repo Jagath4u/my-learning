@@ -1,6 +1,6 @@
 # Basic commands referencing Kubernetes
 #### Useful Kubectl Commands
-- Login to Azure
+- <font size="1"> Login to Azure </font>
 ```
 az login
 ```
