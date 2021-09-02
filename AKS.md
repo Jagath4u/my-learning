@@ -1,8 +1,8 @@
 # Basic commands referencing Kubernetes
-#### useful kubectl commands
-
+#### Useful Kubectl Commands
 - Login to Azure
 ```
+
 az login
 - Connect to an Azure Subscription
 ```
