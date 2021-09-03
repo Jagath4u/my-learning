@@ -19,6 +19,15 @@ alias kcn='kubectl config set-context --current --namespace'
 alias kcg='kubectl config get-contexts'
 alias kcu='kubectl config use-context'
 ```
+#### - To set the clustername and namespace on the prompt, need to execute the below at /home/<user>/kube-ps1-0.7.0 here user created is **kubernetes**
+```
+wget https://github.com/jonmosco/kube-ps1/archive/v0.7.0.tar.gz
+tar -xvzf v0.7.0.tar.gz
+sudo cp kube-ps1-0.7.0/kube-ps1.sh /usr/local/bin/kube-ps1.sh
+chmod 755 /usr/local/bin/kube-ps1.sh
+source /usr/local/bin/kube-ps1.sh
+PS1='[$(kube_ps1)]\$ '
+```
 #### - List the namespace
 ```
 k get ns
