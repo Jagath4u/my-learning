@@ -33,7 +33,7 @@ k get pods
 ```
 #### - Check the pod in detail, where pod = mysql-primary-0
 ```
-k describle pod mysql-primary-0
+k get describle pod mysql-primary-0
 ```
 ## - To apply a yaml file
 ```
