@@ -32,7 +32,10 @@ echo \
 ```
 docker images
 ```
-> Login to ACR using **login server**: containerregistryjagathaskdemo.azurecr.io, **username**: containerregistryjagathaskdemo, **password**: rUG0+/3SwbLS09aZUrHW8tbbda3VveN4, check in Azure Portal under ACR
+### Steps to connect to ACR
+- **login server**: containerregistryjagathaskdemo.azurecr.io, 
+- **username**: containerregistryjagathaskdemo, 
+- **password**: rUG0+/3SwbLS09aZUrHW8tbbda3VveN4,  then check in Azure Portal under ACR
 ```
 az acr login --name containerregistryjagathaskdemo.azurecr.io
 ```
