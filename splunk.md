@@ -9,7 +9,7 @@ sudo dpkg -i splunk-8.2.2-87344edfcdb4-linux-2.6-amd64.deb
 ```
 sudo /opt/splunk/bin/splunk enable boot-start
 ```
-#### - provide the username: admin, password:<our choice, Kadambattu@123!> 
+> provide the **username**: admin, **password**:<our choice, Kadambattu@123!> 
 
 #### - Start the Splunk service
 ```
