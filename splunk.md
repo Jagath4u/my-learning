@@ -90,4 +90,4 @@ http://docs.splunk.com/Documentation/Splunk/4.3.2/Data/Monitorchangestoyourfiles
 Note that Splunk also has a centralized configuration management server called Deployment Server. This can be used to define server classes and push out specific apps and configurations to those classes. So you may want to have your production servers class have the unix app configured to execute those scripts listed in ~local/inputs at the default values, but maybe your QA servers only need a few of the full stack, and at longer polling intervals. Using Deployment Server, you can configure these classes, configure the app once centrally, and push the appropriate app/configuration to the right systems.
 ```
 
-## - For more details, please check https://community.splunk.com/t5/All-Apps-and-Add-ons/How-do-I-configure-a-Splunk-Forwarder-on-Linux/m-p/72078
+> For more details, please check https://community.splunk.com/t5/All-Apps-and-Add-ons/How-do-I-configure-a-Splunk-Forwarder-on-Linux/m-p/72078
