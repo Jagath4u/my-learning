@@ -54,17 +54,17 @@ Manager -> sending and receiving -> configure receiving -> new). In our case hos
 ### - Add Data:
 ```
 /opt/splunkforwarder/bin/splunk add monitor /path/to/app/logs/ -index main -sourcetype %app%
-
+```
 Where /path/to/app/logs/ is the path to application logs on the host that you want to bring into Splunk, and %app% is the name you want to associate with that type of data
 
 This will create a file: inputs.conf in /opt/splunkforwarder/etc/apps/search/local/ -- here is some documentation on inputs.conf:
-
+```
 http://docs.splunk.com/Documentation/Splunk/latest/admin/Inputsconf
-
+```
 Note: System logs in /var/log/ are covered in the configuration part of Step 7. If you have application logs in /var/log/*/
 In our case,
 /opt/splunkforwarder/bin/splunk add monitor /path/to/app/logs/
-```
+
 #### - Install and Configure UNIX app on Indexer and *nix forwarders:
 ```
 On the Splunk Server, go to Apps -> Manage Apps -> Find more Apps Online -> Search for ‘Splunk App for Unix and Linux’ -> Install the "Splunk App for Unix and Linux'
