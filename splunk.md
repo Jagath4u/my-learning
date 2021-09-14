@@ -1,5 +1,5 @@
 # Install Splunk 8.2.2 Enterprise Instance on Ubuntu 20.4 & How to forward data to Splunk Enterprise
-### Go to link: https://www.splunk.com/en_us/download/splunk-enterprise.html and select Linux --> .deb file to install on Ubuntu. click on download and select command line(wget)
+### [Click here](https://www.splunk.com/en_us/download/splunk-enterprise.html) and select Linux --> .deb file to install on Ubuntu. click on download and select command line(wget)
 #### - Login to Ubuntu Machine and Install Splunk 8.2.2
 ```
 wget -O splunk-8.2.2-87344edfcdb4-linux-2.6-amd64.deb 'https://d7wz6hmoaavd0.cloudfront.net/products/splunk/releases/8.2.2/linux/splunk-8.2.2-87344edfcdb4-linux-2.6-amd64.deb'
