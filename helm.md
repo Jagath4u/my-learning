@@ -18,9 +18,19 @@ velero                          velero          1               2021-09-16 15:01
 ```
 #### - To list helm chart repositories from the above releases, search a particular chart, and show the chart values, here chart is external-secrets
 ```
-helm repo list
-helm search repo external-secrets
+**helm repo list**
+o/p:
+jagathuser@RaviTestVM:~$ helm repo list
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /home/jagathuser/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /home/jagathuser/.kube/config
+NAME                    URL
+bitnami                 https://charts.bitnami.com/bitnami
+stable                  https://charts.helm.sh/stable
+external-secrets        https://external-secrets.github.io/kubernetes-external-secrets/
+vmware-tanzu            https://vmware-tanzu.github.io/helm-charts
+
 helm search repo bitnami/mysql
+
 helm show values external-secrets/kubernetes-external-secrets
 ```
 #### - To export the values in the chart to values.yaml, here external-secrets and bitn
