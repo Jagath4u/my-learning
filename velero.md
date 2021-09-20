@@ -58,4 +58,9 @@ velero delete backup mysql-jagath-backup
 ```
 velero delete restore mysql-jagath-latest
 ```
+#### - To uninstall velero
+```
+kubectl delete namespace/velero clusterrolebinding/velero
+kubectl delete crds -l component=velero
+```
 
