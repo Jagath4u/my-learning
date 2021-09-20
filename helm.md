@@ -94,6 +94,12 @@ helm install jagath-mysql bitnami/mysql -f bitmani-mysql-8.8.7-values.yaml
 ```
 helm upgrade bitnami-mysql  bitnami/mysql -f value.yaml
 ```
+### - To retrieve the mysql-root password
+```
+jagathuser@RaviTestVM:~/velero$ ROOT_PASSWORD=$(kubectl get secret --namespace mysql-new-jagath jagath-mysql -o jsonpath="{.data.mysql-root-password}" | base64 --decode)
+jagathuser@RaviTestVM:~/velero$ echo $ROOT_PASSWORD
+qyIXkaeIYL
+```
 ### - To connect to mysql pod
 ```
 k exec -it mysql-0 -- bash
