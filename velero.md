@@ -48,7 +48,7 @@ helm install  velero vmware-tanzu/velero \
 ```
 #### - To create backup location, need to pass the provider, bucket, region, resourcegroup, storage account.
 ```
-velero backup-location create mysqldb --provider azure --bucket mysql --region resourceGroup=jagathaksdemo,storageAccount=bigdatadbstorageaccount
+velero backup-location create mysqldb --provider azure --bucket mysql --region=resourceGroup=jagathaksdemo,storageAccount=bigdatadbstorageaccount
 ```
 #### - to list the backup location
 ```
