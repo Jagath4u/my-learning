@@ -1,6 +1,6 @@
 # Command on Velero
 ### - Instruction to install Velero to take backup of MySQL DB containers
-### - Before installing velero, Prepare MySQL for a Velero stateful backup by adding Annotations
+#### - Before installing velero, Prepare MySQL for a Velero stateful backup by adding Annotations
 The first step is to add annotations to each of the Pods in the StatefulSet to indicate that the contents of the persistent volumes, mounted on **data**, needs to be backed up as well. Velero uses the restic program at this time for capturing state/data from Kubernetes. Either make an entry on /home/jagathuser/helm-values/bitmani-mysql-8.8.7-values.yaml as shown below or give commands like below.
 ```
 podAnnotations:
@@ -12,7 +12,15 @@ pod/mysql-0 annotated
 $ k -n mysql describe pod/mysql-0 | grep Annotations
 Annotations:        backup.velero.io/backup-volumes: data
 ```
-### - Create a file: credentials-velero in /home/jagathuser/velero
+#### - Verify if the annotation is properly set and applied.
+```
+k describe statefulset mysql
+```
+### - Apply the changes in yaml file to update the mysql containers.
+```
+helm upgrade mysql bitnami/mysql -f bitmani-mysql-8.8.7-values.yaml --set auth.rootPassword=$MYSQL_ROOT_PASSWORD
+```
+#### - Create a file: credentials-velero in /home/jagathuser/velero
 ```
 AZURE_STORAGE_ACCOUNT_ACCESS_KEY="cxAK+g4ucjtLUfDctJxs8G8iWdQahtdwQwZ7WQ+LfmEvRY4hJ6Fz3shAghFByg52mf37bwWJUtwJRsTUZS+akQ=="
 AZURE_CLOUD_NAME=AzurePublicCloud
