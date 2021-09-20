@@ -62,5 +62,7 @@ velero delete restore mysql-jagath-latest
 ```
 kubectl delete namespace/velero clusterrolebinding/velero
 kubectl delete crds -l component=velero
+kcn velero
+helm delete velero
 ```
 
