@@ -62,9 +62,13 @@ velero backup create mysql-jagath-backup --include-namespaces mysql-jagath
 ```
 velero get backup
 ```
+#### - To describe the backup taken from above step
+```
+velero describe backup mysql-jagath-backup --details
+```
 #### - To retore the namespace: mysql-jagath from the backup taken in storage account in azure
 ```
-velero restore create mysql-jagath-restore --from-backup mysql-jagath-backup
+velero restore create mysql-jagath-restore --from-backup mysql-jagath-backup --wait
 ```
 #### - To list the restore operations performed
 ```
