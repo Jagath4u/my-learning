@@ -94,3 +94,11 @@ helm install jagath-mysql bitnami/mysql -f bitmani-mysql-8.8.7-values.yaml
 ```
 helm upgrade bitnami-mysql  bitnami/mysql -f value.yaml
 ```
+### - To connect to mysql pod
+```
+k exec -it mysql-0 -- bash
+```
+### - To connect to mysql shell
+```
+mysql -uroot -p
+```
